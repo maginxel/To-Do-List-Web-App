@@ -1,0 +1,121 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+header h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 1em;
+}
+
+#task-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#task-input:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#add-task-btn {
+    padding: 15px 20px;
+    border: none;
+    background: #8e44ad;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+}
+
+#add-task-btn:hover {
+    background: #9b59b6;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    word-break: break-word;
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+#task-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.task-actions button.delete-btn:hover {
+    color: #e74c3c;
+}
+
+.task-actions button.complete-btn:hover {
+    color: #2ecc71;
+}
+
+.fa-plus {
+    font-size: 1em;
+} 
+
+/* New edit button styling */
+.task-actions button.edit-btn:hover {
+    color: #f1c40f; /* yellow hover for edit */
+}
